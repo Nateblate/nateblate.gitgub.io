@@ -1,71 +1,264 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV - Tu Nombre</title>
-  <meta name="description" content="CV online de Tu Nombre." />
-  <style>
-    body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.5; color: #111; }
-    header { padding: 48px 16px; background: #0b1220; color: #fff; }
-    main { max-width: 900px; margin: 0 auto; padding: 24px 16px 64px; }
-    h1 { margin: 0 0 8px; }
-    .subtitle { margin: 0; opacity: 0.9; }
-    section { margin-top: 28px; }
-    a { color: #2563eb; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Currículum Vitae de Nathaniel Blake — Desarrollador de Software" />
+  <title>Nathaniel Blake — CV</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ===== Header ===== -->
   <header>
-    <main>
-      <h1>Tu Nombre</h1>
-      <p class="subtitle">Tu profesión / rol — Ciudad, País</p>
-      <p>
-        <a href="mailto:tuemail@ejemplo.com" style="color:#93c5fd">tuemail@ejemplo.com</a>
-        · <a href="https://github.com/Nateblate" style="color:#93c5fd">GitHub</a>
-      </p>
-    </main>
+    <h1>Nathaniel Blake</h1>
+    <p class="subtitle">Desarrollador de Software · Full Stack</p>
+    <div class="header-links">
+      <a href="mailto:nate@example.com" aria-label="Correo electrónico">
+        ✉ nate@example.com
+      </a>
+      <a href="https://github.com/Nateblate" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        ⌥ GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/nateblate" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        ⊞ LinkedIn
+      </a>
+      <a href="tel:+34600000000" aria-label="Teléfono">
+        ☎ +34 600 000 000
+      </a>
+    </div>
   </header>
 
+  <!-- ===== Navigation ===== -->
+  <nav aria-label="Secciones del CV">
+    <div class="container">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#educacion">Educación</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- ===== Main ===== -->
   <main>
-    <section>
-      <h2>Sobre mí</h2>
-      <p>Escribe aquí un resumen breve de 3–5 líneas sobre tu perfil.</p>
-    </section>
+    <div class="container">
 
-    <section>
-      <h2>Experiencia</h2>
-      <ul>
-        <li><strong>Puesto</strong> — Empresa (Año–Año). Qué hiciste y qué lograste.</li>
-      </ul>
-    </section>
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="about">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy un desarrollador de software con más de 5 años de experiencia diseñando
+          y construyendo aplicaciones web escalables. Me apasiona escribir código limpio,
+          trabajar en equipos ágiles y aprender nuevas tecnologías. Disfruto resolver
+          problemas complejos y convertir ideas en productos funcionales que generen
+          valor real para los usuarios.
+        </p>
+      </section>
 
-    <section>
-      <h2>Educación</h2>
-      <ul>
-        <li>Carrera / Curso — Institución (Año)</li>
-      </ul>
-    </section>
+      <!-- Experiencia -->
+      <section id="experiencia">
+        <h2>Experiencia</h2>
+        <ul class="timeline">
 
-    <section>
-      <h2>Habilidades</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Git, GitHub</li>
-      </ul>
-    </section>
+          <li>
+            <span class="date">Ene 2023 – Presente</span>
+            <h3>Desarrollador Full Stack Senior</h3>
+            <p class="org">TechCorp Solutions · Madrid, España</p>
+            <p>
+              Diseño y mantenimiento de microservicios con Node.js y Python. Desarrollo
+              de interfaces en React. Reducción del tiempo de carga en un 40 % mediante
+              optimizaciones de caché y consultas SQL.
+            </p>
+          </li>
 
-    <section>
-      <h2>Proyectos</h2>
-      <ul>
-        <li><a href="#">Nombre del proyecto</a> — breve descripción.</li>
-      </ul>
-    </section>
+          <li>
+            <span class="date">Jun 2020 – Dic 2022</span>
+            <h3>Desarrollador Web</h3>
+            <p class="org">Agencia Pixel · Barcelona, España</p>
+            <p>
+              Implementación de sitios corporativos y tiendas en línea con WordPress y
+              WooCommerce. Integración de APIs de pago (Stripe, PayPal). Colaboración
+              directa con diseñadores UX/UI.
+            </p>
+          </li>
 
-    <section>
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
-    </section>
+          <li>
+            <span class="date">Mar 2019 – May 2020</span>
+            <h3>Desarrollador Junior</h3>
+            <p class="org">StartupXYZ · Valencia, España</p>
+            <p>
+              Desarrollo de funcionalidades front-end en Vue.js. Mantenimiento de base
+              de datos MySQL y creación de reportes automatizados.
+            </p>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Educación -->
+      <section id="educacion">
+        <h2>Educación</h2>
+        <ul class="timeline">
+
+          <li>
+            <span class="date">2015 – 2019</span>
+            <h3>Grado en Ingeniería Informática</h3>
+            <p class="org">Universidad Politécnica de Madrid</p>
+            <p>Especialización en Ingeniería del Software. Nota media: 8,4 / 10.</p>
+          </li>
+
+          <li>
+            <span class="date">2022</span>
+            <h3>Certificación AWS Cloud Practitioner</h3>
+            <p class="org">Amazon Web Services</p>
+            <p>Fundamentos de computación en la nube, servicios principales de AWS y seguridad.</p>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <h3>Front-end</h3>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Vue.js</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Back-end</h3>
+            <div class="skill-tags">
+              <span>Node.js</span>
+              <span>Python</span>
+              <span>REST APIs</span>
+              <span>GraphQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Bases de datos</h3>
+            <div class="skill-tags">
+              <span>MySQL</span>
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>DevOps &amp; Cloud</h3>
+            <div class="skill-tags">
+              <span>Docker</span>
+              <span>Git</span>
+              <span>AWS</span>
+              <span>Linux</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Metodologías</h3>
+            <div class="skill-tags">
+              <span>Scrum</span>
+              <span>Kanban</span>
+              <span>TDD</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Idiomas</h3>
+            <div class="skill-tags">
+              <span>Español (nativo)</span>
+              <span>Inglés (B2)</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <h3>TaskFlow</h3>
+            <p>
+              Aplicación de gestión de tareas con autenticación JWT, notificaciones en
+              tiempo real vía WebSockets y panel de analítica.
+            </p>
+            <a class="project-link" href="https://github.com/Nateblate/taskflow"
+               target="_blank" rel="noopener noreferrer">Ver en GitHub →</a>
+          </article>
+
+          <article class="project-card">
+            <h3>WeatherDash</h3>
+            <p>
+              Dashboard del tiempo que consume la API de OpenWeatherMap. Visualización
+              de datos con Chart.js y diseño responsive.
+            </p>
+            <a class="project-link" href="https://github.com/Nateblate/weatherdash"
+               target="_blank" rel="noopener noreferrer">Ver en GitHub →</a>
+          </article>
+
+          <article class="project-card">
+            <h3>BlogCMS</h3>
+            <p>
+              CMS ligero para blogs construido con Node.js y SQLite. Soporte para
+              Markdown, etiquetas y editor WYSIWYG.
+            </p>
+            <a class="project-link" href="https://github.com/Nateblate/blogcms"
+               target="_blank" rel="noopener noreferrer">Ver en GitHub →</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:nate@example.com">nate@example.com</a>
+          </li>
+          <li>
+            <span class="label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/nateblate" target="_blank"
+               rel="noopener noreferrer">linkedin.com/in/nateblate</a>
+          </li>
+          <li>
+            <span class="label">GitHub</span>
+            <a href="https://github.com/Nateblate" target="_blank"
+               rel="noopener noreferrer">github.com/Nateblate</a>
+          </li>
+          <li>
+            <span class="label">Teléfono</span>
+            <a href="tel:+34600000000">+34 600 000 000</a>
+          </li>
+          <li>
+            <span class="label">Ubicación</span>
+            <span>Madrid, España</span>
+          </li>
+        </ul>
+      </section>
+
+    </div>
   </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2026 Nathaniel Blake · Hecho con HTML y CSS</p>
+  </footer>
+
 </body>
 </html>
