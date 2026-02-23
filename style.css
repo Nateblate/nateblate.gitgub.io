@@ -6,13 +6,15 @@
 }
 
 :root {
-  --color-bg: #f5f5f5;
-  --color-surface: #ffffff;
-  --color-primary: #2c3e50;
-  --color-accent: #3d6b8e;
-  --color-text: #333333;
-  --color-muted: #666666;
-  --color-border: #dde1e7;
+  --color-bg: #0a0a0a;
+  --color-surface: #1a1a1a;
+  --color-primary: #00d4ff;
+  --color-accent: #4da6ff;
+  --color-text: #e0e0e0;
+  --color-muted: #a0a0a0;
+  --color-border: #333333;
+  --color-neon: #00d4ff;
+  --color-neon-glow: rgba(0, 212, 255, 0.4);
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 860px;
   --radius: 6px;
@@ -48,10 +50,16 @@ a:hover {
 
 /* ===== Header ===== */
 header {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
   color: #ffffff;
   padding: 3rem 1.5rem 2.5rem;
   text-align: center;
+  border: 2px solid var(--color-neon);
+  box-shadow: 
+    0 0 20px var(--color-neon-glow),
+    inset 0 0 20px rgba(0, 212, 255, 0.1);
+  border-radius: var(--radius);
+  margin: 1rem;
 }
 
 header h1 {
@@ -59,6 +67,8 @@ header h1 {
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 0.4rem;
+  color: var(--color-neon);
+  text-shadow: 0 0 10px var(--color-neon-glow);
 }
 
 header .subtitle {
@@ -80,21 +90,29 @@ header .subtitle {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
 }
 
 .header-links a:hover {
-  color: #ffffff;
+  color: var(--color-neon);
   text-decoration: none;
+  border-color: var(--color-neon);
+  box-shadow: 0 0 10px var(--color-neon-glow);
 }
 
 /* ===== Navigation ===== */
 nav {
   background-color: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  border: 1px solid var(--color-neon);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  margin: 0 1rem;
+  border-radius: var(--radius);
 }
 
 nav .container {
@@ -113,13 +131,14 @@ nav a {
   color: var(--color-primary);
   font-weight: 500;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s, color 0.2s;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-neon);
+  border-bottom-color: var(--color-neon);
   text-decoration: none;
+  text-shadow: 0 0 8px var(--color-neon-glow);
 }
 
 /* ===== Main content ===== */
@@ -133,17 +152,21 @@ section {
   border-radius: var(--radius);
   padding: 2rem 2.2rem;
   margin-bottom: 1.8rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-neon);
+  box-shadow: 
+    0 0 15px rgba(0, 212, 255, 0.2),
+    inset 0 0 15px rgba(0, 212, 255, 0.05);
 }
 
 section h2 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-neon);
   margin-bottom: 1.4rem;
   padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--color-accent);
   display: inline-block;
+  text-shadow: 0 0 8px var(--color-neon-glow);
 }
 
 /* ===== Sobre mí ===== */
@@ -167,7 +190,8 @@ section h2 {
   top: 6px;
   bottom: 6px;
   width: 2px;
-  background-color: var(--color-border);
+  background: linear-gradient(to bottom, var(--color-neon), var(--color-accent));
+  box-shadow: 0 0 10px var(--color-neon-glow);
 }
 
 .timeline li {
@@ -186,16 +210,18 @@ section h2 {
   top: 6px;
   width: 12px;
   height: 12px;
-  background-color: var(--color-accent);
+  background-color: var(--color-neon);
   border-radius: 50%;
   border: 2px solid var(--color-surface);
-  box-shadow: 0 0 0 2px var(--color-accent);
+  box-shadow: 
+    0 0 0 2px var(--color-neon),
+    0 0 10px var(--color-neon-glow);
 }
 
 .timeline .date {
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-neon);
   text-transform: uppercase;
   letter-spacing: 0.4px;
   margin-bottom: 0.25rem;
@@ -242,13 +268,26 @@ section h2 {
 }
 
 .skill-tags span {
-  background-color: #eaf0f6;
+  background-color: #2a2a2a;
   color: var(--color-accent);
   font-size: 0.82rem;
   font-weight: 500;
   padding: 0.25rem 0.65rem;
   border-radius: 20px;
-  border: 1px solid #c5d8eb;
+  border: 1px solid var(--color-accent);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tags span:hover {
+  background-color: var(--color-neon);
+  color: #000000;
+  border-color: var(--color-neon);
+  box-shadow: 
+    0 0 15px var(--color-neon-glow),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  text-shadow: none;
 }
 
 /* ===== Proyectos ===== */
@@ -259,15 +298,19 @@ section h2 {
 }
 
 .project-card {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-neon);
   border-radius: var(--radius);
   padding: 1.2rem 1.4rem;
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
 }
 
 .project-card:hover {
-  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.1);
-  border-color: #b0c4d8;
+  box-shadow: 
+    0 0 20px var(--color-neon-glow),
+    0 4px 15px rgba(0, 212, 255, 0.2);
+  border-color: var(--color-neon);
+  transform: translateY(-2px);
 }
 
 .project-card h3 {
@@ -316,7 +359,11 @@ footer {
   padding: 1.5rem;
   font-size: 0.85rem;
   color: var(--color-muted);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-neon);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+  margin: 0 1rem;
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
 }
 
 /* ===== Responsive ===== */
